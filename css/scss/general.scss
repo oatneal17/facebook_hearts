@@ -1,0 +1,141 @@
+/**
+ * ------------------------
+ * General Rules
+ * ------------------------
+ */
+
+* {outline: 0;}
+html,
+body {
+	overflow-x: hidden;
+}
+
+body.boxed {
+	padding: 0 40px;
+	@media screen and (max-width: $screen-sm-min) {
+		padding: 0 20px;
+	}
+	@media screen and (max-width: $screen-xs-min) {
+		padding: 0 10px;
+	}
+}
+
+/*Display Types*/
+.inline { display: inline; }
+
+/*Links*/
+a {
+	&:focus,
+	&:hover{
+		color: $primary;
+		text-decoration: none;	
+	}
+}
+
+/*List*/
+
+ol.no-list,
+ul.no-list {
+	li {
+		list-style: none;
+	}
+}
+
+/*images*/
+img {
+	max-width: 100%;
+	height: auto;
+}
+.circular {
+	@include border-radius(50%);
+}
+
+/*borders*/
+.bordered {
+	border: 1px solid $color_light_grey;
+}
+.border-top,
+.border-bottom ,
+.border-right ,
+.border-left {
+	border-color: $color_light_grey;
+}
+
+.border-right {
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+.border-left {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+.border-top {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.border-bottom {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/*Spacer*/
+.spacer {
+	clear: both;
+	display: block;
+	&.hairline{
+		height: 1px;
+		background: $color_light_grey;
+		width: 75%;
+		margin: 40px auto;
+
+		span{
+			@include vertical-rhythm(16);
+			display: inline-block;
+			background: #fff;
+			position: relative;
+			top: -15px;
+			width: 117.5px;
+		}
+	}
+	&.wide {
+		width: 100%;
+	}
+	&.no-mg {
+		margin: 0 auto;
+	}
+}
+
+/*labels*/
+.label {
+	background: $blue;
+	color: $white;
+	padding: 1px 10px 2px;
+	display: inline-block;
+	@include border-radius(5px);
+	&.label-primary {
+		background-color: $primary;
+	}
+}
+
+/*Positioning*/
+.relative {
+	position: relative;
+}
+
+/*Width Control*/
+.width-25 {
+	width: 25%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+.width-75 {
+	width: 75%;
+}
+
+.width-100 {
+	width: 100%;
+}

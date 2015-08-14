@@ -1,0 +1,63 @@
+
+/* All the styles related to sign in page
+ ----------------------------------------*/
+
+body.zawaj-sign-in {
+
+	::-webkit-input-placeholder { color: $white; }
+	:-moz-placeholder { /* Firefox 18- */  color: $white; }
+	::-moz-placeholder {  /* Firefox 19+ */  color: $white; }
+	:-ms-input-placeholder { color: $white; }
+
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+	color: $white;
+
+	.sign-in-section {
+		padding-top: 205px;
+		@media screen and (max-width: $screen-sm-min) {
+			padding-top: 0px;
+		}
+		a.btn,
+		input[type=submit],
+		input[type=email],
+		input[type=password],
+		input[type=text] {
+			padding: 15px;
+		}
+
+		a.btn,
+		input[type=submit] {
+			padding-top: 10px;
+			padding-bottom: 12.5px;
+			padding-left: 30px;
+			padding-right: 30px;
+			&:hover {
+				color: $white;
+			}
+		}
+
+		.intro-text {
+			padding-right: 100px;
+			padding-left: 25px;
+			@media screen and (max-width: $screen-sm-min) {
+				padding-right: 0;
+				margin-left: -25px;
+				margin-bottom: 50px;
+			}
+		}
+
+		.terms-link {
+			color: $white;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+body.zawaj-register.zawaj-sign-in {
+	.sign-in-section {
+		padding-top: 105px;
+	}
+}

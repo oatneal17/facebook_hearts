@@ -1,0 +1,32 @@
+/*
+-----------------------------
+Steps to find match component
+-----------------------------
+ */
+.steps-to-find-match {
+	.step {
+		&:hover{
+			.stfm-icon {
+				background: $white;
+				border: 1px solid $violet;
+			}
+			.fa {
+				color: $violet;
+			}
+		}
+	}
+	.stfm-icon {
+		height: 100px;
+		width: 100px;
+		display: table;
+		margin: 0 auto 35px;
+		@include border-radius (50%);
+		@include element-gradient();
+		.fa {
+			display: table-cell;
+			vertical-align: middle;
+			color: $white;
+			font-size: 25px;
+		}
+	}
+}

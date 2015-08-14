@@ -1,0 +1,41 @@
+.four-o-four-section {
+	.o-404-desc {
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+	#o-404-text {
+		@include vertical-rhythm(300);
+		font-weight: bold;
+		display: block;
+		margin-top: 170px;
+		margin-bottom: 170px;
+
+		&.masked {
+
+			 -webkit-text-fill-color: transparent;
+
+			 background: -webkit-linear-gradient(transparent, transparent),
+			             url(../images/404-bg.jpg) no-repeat;
+
+			 background: -o-linear-gradient(transparent, transparent);
+			 -webkit-background-clip: text;
+
+			 background-size: cover;
+
+			 -webkit-background-clip: text;
+
+   			 line-height: 100%;
+   			 
+   			 margin-top: 32px;
+			 margin-bottom: 32px;
+
+		}
+
+		@media screen and (max-width: $screen-xs-min) {
+			@include vertical-rhythm(100);
+			margin-top: 70px;
+			margin-bottom: 20px;
+		}
+	}
+}

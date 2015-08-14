@@ -1,0 +1,212 @@
+/**
+ * This file contains the styling for blogs 
+ * single, archive, and other things related
+ * to blog design
+ */
+
+/* Single Article
+-------------------- */
+.single-post{
+	.post-thumbnail {
+		@include border-radius(4px);
+	}
+	/*Blog Meta*/
+	.blog-meta {
+
+		padding: 25px 0 17.5px;
+		border-bottom: 1px solid $color_light_grey;
+		margin-bottom: 25px;
+
+		ul {
+			display: inline-block;
+			margin-bottom: -6px;
+			text-transform: uppercase;
+			font-weight: bold;
+			
+			@include vertical-rhythm(13);
+
+			margin-bottom: 0;
+
+			li {
+				float: left;
+				margin: 0 15px;
+				position: relative;
+
+				color: $color-dark-blue;
+
+				a {
+					@extend .fg-dark-blue;
+				}
+
+				&:after{
+					content: "\b7\a0"; /*&middot;*/
+					font-size: 20px;
+					margin-left: 10px;
+					position: absolute;
+					top: -7.5px;
+				}
+
+				&:first-child {
+					margin-left: 0;
+					@media screen and (max-width: $screen-sm-min) {
+						margin-left: 15px;
+					}
+				}
+
+				&:last-child {
+					&:after {
+						content: "";
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	/*Tags and Sharing Commons*/
+	.entry-tags,
+	.entry-share {
+
+		@include border-radius(4px);
+		margin: 15px 0;
+
+		display: inline-block;
+		clear: both;
+		width: 100%;
+
+
+		border: 1px solid $color_light_grey;
+		
+
+		.tag-label,
+		.share-label {
+			@extend .fg-pale-blue;
+			font-size: 23px;
+			margin-bottom: 0;
+			
+			float: left;
+			display: block;
+			padding: 10px 10px;
+
+		}
+
+		
+	}
+
+	/*Tags*/
+	.entry-tags {
+		margin-top: 35px;
+		.tag-list {
+			padding: 15px;
+			border-left: 1px solid $color_pale_grey;
+			float: left;
+		}
+
+		a{
+			@extend .fg-pale-blue;
+
+			font-size: $body_copy_size_xs +px;
+			
+			display: inline-block;
+			line-height: 10px;
+			margin-bottom: -6px;
+
+		}
+	}
+
+	/*Sharing*/
+	.entry-share {
+		margin-bottom: 35px;
+		ul {
+				display: inline-block;
+				margin-bottom: -6px;
+				float: left;
+				
+				width: 80%;
+				border-left: 1px solid $color_pale_grey;
+				padding: 10px 0 10px;
+				li {
+					float: left;
+					display: block;
+
+										text-align: center;
+					margin-left: 15px;
+
+					
+					a {
+						color: $white;
+						background-color: $color_pale_grey;
+						display: block;
+						border: 1px solid $color_pale_blue;
+						padding: 5px;
+						line-height: 1px;
+						width: 35px;
+						font-size: 23px;
+						@include border-radius(6px);
+					}
+				}
+			}
+	}
+
+	/*Author*/
+	.entry-author {
+
+		padding: 25px 0;
+		border: 1px solid $color_light_grey;
+		border-right: 0;
+		border-left: 0;
+
+		.avatar{
+			@include border-radius(6px);
+		}
+	}
+
+	/*Entry Comments*/
+	.entry-comments {
+		.avatar{
+			@include border-radius(6px);
+		}
+		.comment-body{
+				margin-bottom: 35px;
+			}
+		ol.comment-list {
+			margin-left: 0;
+			padding-left: 0;
+
+		}
+
+		ol.children,
+		ol.comment-list {
+			list-style: none;
+		}
+
+		ol.children {
+			margin-left: 140px;
+			padding-left: 0;
+			@media screen and (max-width: $screen-sm-min) {
+				margin-left: 15px;
+			}
+		}
+
+		.comment-content {
+			padding: 25px 25px 0 25px;
+			@include border-radius(4px);
+			@extend .bordered;
+		}
+		.comment-meta {
+			ul {
+				display: inline-block;
+				width: 100%;
+
+				li {
+					float: left;
+					margin-right: 20px;
+				}
+
+				h4 {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

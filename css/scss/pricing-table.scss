@@ -1,0 +1,28 @@
+.pricing {
+	.pricing-heading{
+		h3 {
+			@include vertical-rhythm(32);
+		}
+	}
+	.pricing-price {
+		h3 {
+			@include vertical-rhythm(32);
+			margin-bottom: 10px;
+			.cents {
+				font-size: 14px;
+			}
+		}
+	}
+	.pricing-features{ 
+		li {
+			text-transform: uppercase;
+			@include vertical-rhythm(14);
+			margin-bottom: 10px;
+		}
+		.fa {
+			margin-right: 5px;
+			font-size: 12px;
+		}
+	}
+	
+}

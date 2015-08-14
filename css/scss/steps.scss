@@ -1,0 +1,16 @@
+.steps {
+	@extend .circular;
+	@extend .bordered;
+	@include vertical-rhythm(18);
+
+	font-weight: bold;
+	border-color: $blue;
+	color: $blue;
+
+	padding: 11px 0 0 0;
+	display: block;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+
+}

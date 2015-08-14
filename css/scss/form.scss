@@ -1,0 +1,209 @@
+/**
+ * Form Elements Styling
+ */
+form {
+	display: block;
+	@extend .mg-bottom-20;
+}
+
+/*Inputs*/
+
+textarea,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=dateime],
+input[type=time],
+input[type=search] {
+	width: 100%;
+	border: 1px solid $color_light_grey;
+		
+		color: $body;
+			font-size: $body_copy_size_sm +px;
+	box-sizing: border-box;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	@include border-radius(4px);
+	@include animate();
+	@extend .padding-10;
+	@extend .pd-left-15;
+	@extend .pd-right-15;
+	@extend .mg-bottom-20;
+
+	
+	&.input-gradient-light { 
+		border-width: 1px;
+		@include element-gradient-light();
+		
+	}
+
+	&.input-transparent {
+		border-width: 1px;
+		background-color: transparent;
+		color: $white;
+	}
+}
+
+
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=dateime]:focus,
+input[type=time]:focus,
+input[type=search]:focus {
+	border-color: $color_grey;
+	&.input-transparent {
+		border-color: $white;
+	}
+}
+
+/*Select*/
+select,
+.select {
+	@include border-radius(6px);
+	@extend .padding-10;
+	@extend .mg-bottom-20;
+	@extend .mg-right-15;
+	background:transparent;
+	border: 1px solid rgba(255, 255, 255, 0.50);
+	height: 40px;
+	width: auto;
+	padding: 0 10px 2.5px;
+	min-width: 130px;
+	max-width: 100%;
+}
+/*Custom Select Style*/
+.zawaj-select {
+
+	z-index: 2;
+
+	&.select-gradient{
+		@include element-gradient-light();
+		&.customSelect { 
+			color: $body;
+			border: 1px solid $color_light_grey;
+			
+			&:after {
+				border-left: 1px solid $color_light_grey;
+				z-index: 0;
+			}
+		}
+	}
+
+	&.customSelect { 
+		@extend .select;
+		
+		color: $white;
+		padding: 4px 10px 3px 10px;
+		position: relative;
+		z-index: 1;
+
+		&:after {
+			content: "\f107";
+			display: block;
+			float: right;
+			font-family: FontAwesome;
+			border-left: 1px solid rgba(255,255,255,0.50);
+			padding: 7px 5px 5px 15px;
+			height: 39px;
+			width: 39px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&.customSelect.customSelectHover {
+	/* Styles for when the select box is hovered */
+	}
+
+	&.customSelect.customSelectOpen {
+	/* Styles for when the select box is open */
+	}
+
+	&.customSelect.customSelectFocus {
+	/* Styles for when the select box is in focus */
+	}
+
+	&.customSelect.customSelectDisabledOption {
+	/* Styles for when the selected item is a disabled one */
+	}
+
+	&.customSelect.customSelectDisabled {
+	/* Styles for when the select box itself is disabled */
+	}
+
+	&.customSelectInner {
+	/* You can style the inner box too */
+	}
+}
+
+/*Buttons*/
+.btn {
+	
+	border-style: solid;
+	border-width: 1px;
+	display: inline-block;
+	border-color: inherit;
+	background-color: transparent;
+
+	@extend .pd-left-25;
+	@extend .pd-right-25;
+	@extend .pd-top-5;
+	@extend .pd-bottom-5;
+	@include border-radius(3px);
+	@include animate();
+
+	font-size: $body_copy_size_sm +px;
+	
+	&.btn-primary {
+		background-color: $primary;
+		border: 0;
+		color: $white;
+	}
+
+	&.btn-secondary {
+		background-color: $blue;
+		border: 0;
+		color: $white;
+
+		&.btn-transparent {
+			color: $blue;
+			background-color: transparent;
+			border: 1px solid $blue;
+
+			&:hover {
+				background-color: $blue;
+				color: $white;
+
+			}
+		}
+	}
+
+	&.btn-transparent {
+		color: $white;
+		&:hover {
+			background-color: $white;
+			color: $primary;
+		}
+	}
+	&.btn-gradient {
+		@include element-gradient();
+		border: 0;
+		color: $white;
+		&:hover {
+			opacity: 0.90;
+			color: $white;
+		}
+	}
+	&.btn-gradient-light {
+		@include element-gradient-light();
+		color: $color_grey;
+		border-color: $color_light_grey;
+	}
+}

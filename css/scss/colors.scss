@@ -1,0 +1,76 @@
+/**
+ * Colors
+ */
+
+/*ForeGround*/
+$primary: #ff0461;
+$body: #969696;
+$white: #fff;
+
+
+$black: #141414;
+	$dark: #2c2b2b;
+	$darken: #353535;
+
+$red: #ff0461;
+	$dark_red: #cd174c;
+
+$blue: #2ba6cb;
+	$color_light_blue: #8698ac;
+	$color_dark_blue: #2a627b;
+	$color_pale_blue: #91a0b4;
+
+$violet: #a14a7e;
+
+$color_pale_grey: #c7d0d9;
+	$color_grey: #6e7c8b;
+	$color_light_grey: #dbe4ed;
+	$color_fallback_bg: #eaeff5;
+
+
+$color_alternate: #f7f8f9;
+
+$green: rgb(46, 201, 46);
+
+/*Background*/
+
+body {
+	color: $body;
+}
+/*Backgrounds*/
+.bg-white { background-color: $white; }
+.bg-primary { background-color: $primary; }
+.bg-washed { background-color: $color_light_grey; }
+.bg-alternate { background-color: $color_alternate; }
+.bg-dark { background-color: $dark; }
+.bg-darken { background-color: $darken; }
+.bg-black { background-color: $black; }
+.bg-fallback {background-color: $color_fallback_bg;}
+
+/*Foregrounds*/
+
+.fg-primary {color:$primary; }
+.fg-grey {color: $color_grey;}
+.fg-light-grey {color: $color_light_grey;}
+.fg-white {color: $white;}
+.fg-violet {color: $violet;}
+.fg-light-blue {color: $color_light_blue;}
+.fg-dark-blue {color: $color_dark_blue;}
+.fg-pale-blue {color: $color_pale_blue;}
+.fg-blue {color: $blue;}
+
+/*Foregrounds Hover*/
+
+a.fg-primary:hover,
+a.fg-grey:hover,
+a.fg-light-grey:hover,
+a.fg-white:hover,
+a.fg-violet:hover,
+a.fg-dark-blue:hover,
+a.fg-pale-blue:hover,
+a.fg-blue:hover,
+a:hover {
+	color: $primary;
+}
+
+

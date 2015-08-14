@@ -1,0 +1,48 @@
+/**
+ * Find Matches
+ */
+.zawaj-find-matches {
+	background-image: url(../images/find-matches-background.jpg);
+	background-size: cover;
+
+		
+		@media screen and (max-width: $screen-sm-min) {
+			.inline-block {
+				width: 45%;
+				margin-right: 5%;
+				float: left;
+				&.submit {
+					width: 100%;	
+				}
+			}
+			select {
+				width: 100%;
+			}
+
+			input[type=submit] {
+				width: 100%;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: $screen-xs-min) {
+			.inline-block,
+			select {
+				width: 100%;
+				display: block;
+			}
+
+			input[type=submit] {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	
+
+	input[type=submit].btn {
+		padding: 10px 60px;
+		top: 2px;
+		position: relative;
+	}
+}

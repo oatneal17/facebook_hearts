@@ -1,0 +1,128 @@
+.user-navigation {
+	ul {
+		@extend .no-mg;
+		@extend .no-pd;
+		@extend .no-list;
+		display: inline-block;
+		margin-bottom: -6px;
+
+		li {
+			float: left;
+			margin-right: 20px;
+			
+			a {
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $blue;
+				&:hover {
+						color: $primary;
+					}
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.current {
+				a {
+					color: $primary;
+
+				}
+			}
+		}
+	}
+}
+
+/* SubNav
+ ----------- */
+#subnav {
+	ul {
+		@extend .no-mg;
+		@extend .no-pd;
+		@extend .no-list;
+		display: inline-block;
+		margin-bottom: -6px;
+		width: 100%;
+
+		li {
+			float: left;
+			margin-right: 20px;
+
+			a {
+				@include border-radius(20px);
+				color: $color_light_blue;
+				border: 1px solid $color_light_blue;
+				padding: 0px 10px 2.5px;
+				display: block;
+
+				&:hover {
+					color: $blue;
+					border-color: $blue;
+				}
+
+				&:before {
+					content: "\f192";
+					font-family: FontAwesome;
+					font-size: 14px;
+					margin-right: 5px;
+				}
+			}
+
+			&.current a {
+
+				color: $blue;
+					border-color: $blue;
+			}
+
+			&#just-me-personal-li  { a:before{ content: "\f118";} }
+			&#activity-mentions-personal-li  { a:before{ content: "\f185";} }
+			&#activity-favs-personal-li  { a:before{ content: "\f006";} }
+			&#activity-groups-personal-li  { a:before{ content: "\f0e6";} }
+
+			&#activity-filter-select {
+				float: right;
+				margin-right: 0;
+
+				select {
+					margin-right: 0;
+					background-color: $color_fallback_bg;
+					border-color: $color_fallback_bg;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $screen-xs-min) {
+	.user-navigation,
+	.user-status {
+		padding: 25px 0 25px 25px;
+	}
+
+	#subnav ul li {
+		margin: 5px;
+	}
+
+	ul.activity-list {
+		border-left-width: 0;
+	}
+
+	.activity-icon-bottom,
+	.activity-icon-top {
+		visibility: hidden;
+	}
+
+
+}
+
+@media screen and (max-width: $screen-sm-min) {
+	#subnav ul li#activity-filter-select {
+		display: inline-block;
+		float: none;
+		width: 100%;
+		clear: both;
+		margin-top: 35px;
+		margin-bottom: -6px;
+		text-align: right;
+	}
+}

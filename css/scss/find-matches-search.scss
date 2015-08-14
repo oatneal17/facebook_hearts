@@ -1,0 +1,16 @@
+.find-matches-search {
+	select {
+		width: 157.25px;
+	}
+	.zawaj-select {
+		background: red;
+		color: $color_grey;
+		border-color: $color_light_grey;
+		
+		@include element-gradient-light();
+
+		&.customSelect:after {
+			border-left-color: $color_light_grey;
+		}
+	}
+}

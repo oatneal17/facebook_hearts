@@ -1,0 +1,148 @@
+/**
+ * Typography
+ */
+$font-stack: 'Lato', Helvetica, sans-serif;
+$body_copy_size: 16;
+$body_copy_size_sm: 14;
+$body_copy_size_xs: 13;
+
+small {
+	font-size: $body_copy_size_xs + px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-stack;
+	font-weight: 700;
+	margin-top: 0;
+}
+
+h1 {
+	@include vertical-rhythm(32);
+}
+
+h2 {
+	@include vertical-rhythm(24);
+}
+
+h3 {
+	@include vertical-rhythm(19);
+}
+
+h4 {
+	@include vertical-rhythm(16);
+}
+
+h5 {
+	@include vertical-rhythm(13);
+}
+
+h6 {
+	@include vertical-rhythm(11);
+}
+
+@media screen and (max-width: $screen-xs-min) {
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.3em;
+	}
+}
+p {
+	@extend .no-mg-top;
+}
+
+body, p{
+	font-family: $font-stack;
+	@include vertical-rhythm($body_copy_size);
+}
+code {
+	display: block;
+	@include vertical-rhythm($body_copy_size);
+}
+
+label {
+	font-weight: normal;
+}
+body { margin-bottom: 0; } /*remove the margin bottom from body*/
+
+/*Blockquotes*/
+blockquote {
+	@include border-radius(4px);
+	@extend .bordered;
+	@extend .type-italic;
+	@extend .type-center;
+	@extend .bg-alternate;
+	padding: 25px 35px;
+	border-left: 0;
+
+	a cite,
+	cite a,
+	cite {
+		color: $primary;
+	}
+}
+
+/*Dropcaps*/
+.dropcap {
+	@include vertical-rhythm(32);
+	@include border-radius(6px);
+
+	display: block;
+	float: left;
+	padding: 20px 25px;
+	margin-right: 15px;
+	background: $color_pale_blue;
+	position: relative;
+	top: 10px;
+	color: $white;
+	margin-bottom: 10px;
+}
+
+.top-links {
+	font-size: $body_copy_size_sm + px;
+}
+
+.type-light {
+	font-weight: 300;
+}
+
+.type-normal {
+	font-weight: 400;
+}
+
+.type-bold {
+	font-weight: 700;
+}
+
+.type-italic {
+	font-style: italic;
+}
+
+.type-center {
+	text-align: center;
+}
+.type-right {
+	text-align: right;
+}
+.type-left {
+	text-align: left;
+}
+
+.type-lowercase {
+	text-transform: lowercase;
+}
+
+.type-capitalize {
+	text-transform: capitalize;
+}
+
+.type-uppercase {
+	text-transform: uppercase;
+}
+
+.smaller p,
+.smaller {
+	@include vertical-rhythm($body_copy_size_sm);
+}
+
+.small {
+	@include vertical-rhythm($body_copy_size_xs);
+}

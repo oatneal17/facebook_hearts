@@ -1,0 +1,20 @@
+.forum-discussion {
+	li {
+		padding: 35px 70px;
+
+		&.topic {
+			border: 1px solid $color_light_grey;
+		}
+
+		&.reply {
+			border-bottom: 1px solid $color_light_grey;
+		}
+		&:last-child {
+			&.reply {
+						border-bottom: none;
+					}
+		}
+		
+	}
+
+}

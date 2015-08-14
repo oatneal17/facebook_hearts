@@ -1,0 +1,68 @@
+.activity-icon-bottom ,
+.activity-icon-top {
+	font-size: 20px;
+	position: relative;
+	left: 22px;
+	top: 6px;
+	display: inline-block;
+	color: $color_light_grey;
+}
+
+.activity-icon-bottom {
+	top: -10px;
+}
+
+ul.activity-list {
+	@extend .no-pd;
+	@extend .no-list;
+	@extend .border-left;
+	@extend .mg-left-30;
+	
+	padding-right: 45px;
+	display: inline-block;
+	margin-bottom: -6px;
+	width: 100%;
+
+	.activity-item {
+		margin-left: -42.5px;
+		margin-top: 35px;
+
+		.activity-inner {
+
+			@extend .bg-fallback;
+			@extend .bordered;
+			@extend .padding-25;
+			padding-bottom: 0;
+			position: relative;
+			color: $color_light_blue;
+			@include border-radius(6px);
+
+			&:after, &:before {
+				bottom: 100%;
+				left: 7%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+			}
+
+			&:after {
+				border-color: rgba(136, 183, 213, 0);
+				border-bottom-color: $color_fallback_bg;
+				border-width: 5px;
+				margin-left: -5px;
+			}
+			&:before {
+				border-color: rgba(194, 225, 245, 0);
+				border-bottom-color: $color_fallback_bg;
+				border-width: 11px;
+				margin-left: -11px;
+			}
+
+			img {
+				@include border-radius(4px);
+			}
+		}
+	}
+}

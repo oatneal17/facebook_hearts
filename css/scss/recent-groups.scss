@@ -1,0 +1,6 @@
+.recent-groups {
+	.avatar {
+		@include element-gradient();
+		padding: 7px;
+	}
+}

@@ -1,0 +1,39 @@
+.sidebar {
+.widget {
+	
+		.widget-title {
+			color: $color_dark_blue;
+			font-size: 16px;
+			border-bottom: 1px solid $color_light_grey;
+			padding-bottom: 25px;
+			margin-bottom: 0;
+		}
+
+		/*Recent Entry Widgets*/
+		&.widget_recent_entries {
+			ul {
+				@extend .no-mg;
+				@extend .no-pd;
+				@extend .no-list;
+				li {
+					a {
+						border-bottom: 1px solid $color_light_grey;
+						color: $color_light_blue;
+						font-weight: bold;
+						padding: 10px 15px 5px 15px;
+						display: inline-block;
+						width: 100%;
+						@include vertical-rhythm(14);
+						margin-bottom: 0;
+					}
+					&:last-child {
+						a {
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	
+	}
+}

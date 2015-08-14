@@ -1,0 +1,60 @@
+/**
+ * SLIDER COMPONENT 
+ */
+.zawaj-slider {
+	background-size: cover;
+	background-image: url('../images/slider-background-1.jpg');
+	position: relative;
+	overflow: hidden;
+
+	.zawaj-slider-caption {
+		padding-top: 125px;
+		padding-bottom: 125px;
+			position: relative;
+		z-index: 2;
+	}
+
+	img#zawaj-couple {
+		position: absolute;
+		bottom: 0;
+		right: 18%;
+		z-index: 1;
+	}
+
+	.zawaj-select {
+		min-width: initial;
+		width: 100%;
+		
+		.customSelectInner {
+			width: 50%!important; /*Fix */
+			font-style: italic;
+		}
+	}
+
+	form {
+		@include border-radius(4px);
+	
+	}
+
+	&.zawaj-slider-2 {
+		background-image: url('../images/slider-background-2.png');
+		form {
+			border: 1px solid rgba(255,255,255,0.40);
+		}
+	 	img#zawaj-couple {
+			right: 0;
+		}
+	}
+
+	&.zawaj-slider-3 {
+		background-image: url('../images/slider-background-3.jpg');
+		form {
+			border: 1px solid rgba(255,255,255,0.40);
+			background-color: rgba(0,0,0,0.40);
+		}
+		img#zawaj-couple {
+			
+			right: 0;
+		}
+	}
+}

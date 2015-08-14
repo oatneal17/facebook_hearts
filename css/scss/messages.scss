@@ -1,0 +1,6 @@
+.messages {
+	 	&.single,
+	.message {
+		@include border-radius(4px);
+	}
+}

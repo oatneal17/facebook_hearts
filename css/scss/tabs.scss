@@ -1,0 +1,56 @@
+.tab-content > .tab-pane {
+  display: none;
+  visibility: hidden;
+}
+.tab-content > .active {
+  display: block;
+  visibility: visible;
+}
+
+ul.nav-tabs {
+	margin: 0 0 -8px 0;
+	padding: 0;
+	display: inline-block;
+	font-size: $body_copy_size_xs+px;
+
+	li {
+		margin: 0;
+		margin-right: -1px;
+		list-style: none;
+		padding: 0;
+		float: left;
+
+		a {
+			padding: 5px 15px;
+			display: block;
+			color: $color_grey;
+			border: 1px solid $color_light_grey;
+		}
+
+
+		&.active {
+			a {
+				border-bottom-color: $primary;
+			}
+		}
+
+	}
+
+	&.secondary {
+		li {
+			&.active {
+						a {
+							border-bottom-color: $blue;
+						}
+					}
+		}
+	}
+}
+
+.tab-content {
+	font-size: $body_copy_size_xs+px;
+	display: block;
+	border: 1px solid $color_light_grey;
+	padding: 15px;
+	margin-top: 1px;
+}

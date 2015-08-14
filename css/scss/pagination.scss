@@ -1,0 +1,32 @@
+.zawaj-pagination {
+	display: block;
+	margin: 35px 0;
+	li {
+		float: left;
+		a {
+			@include border-radius(4px);
+			@include animate();
+			
+			padding: 15px 10px;
+			border: 1px solid $color_light_grey;
+			color:  $color_light_grey;
+			
+			display: inline-block;
+			line-height: 1px;
+			margin-right: 10px;
+		}
+
+		&.active a,
+		&.current a,
+		a:hover {
+				border: 1px solid $color_grey;
+				color:  $color_grey;
+		}
+	}
+
+	&:after{
+		content: " ";
+		clear: both;
+		display: block;
+	}
+}
